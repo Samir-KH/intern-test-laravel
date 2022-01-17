@@ -1,0 +1,63 @@
+.chart{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+}
+
+.horizontal-bar-graph *{
+     margin: 0;
+     padding: 0;
+}
+
+.horizontal-bar-graph .chart-body{
+    /*width: 600px;*/
+    position: relative;
+}
+.horizontal-bar-graph .caption{
+    background : none !important
+}
+
+.horizontal-bar-graph .title p{
+    padding: 10px 30px;
+    font-style: italic;
+    font-size: 15px;
+    text-align: end;
+}
+
+.horizontal-bar-graph .chart-line {
+    background: repeating-linear-gradient(to right, #e9e9f1, #e9e9f1 50px, #ffffff 50px, #ffffff 51px);
+    height: 40px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    margin-left: 220px;
+    padding: 2px 5px;
+
+}
+
+.horizontal-bar-graph .chart-line .bar-title{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    padding: 5px;
+    text-align: end;
+    overflow: hidden;
+}
+
+.horizontal-bar-graph .chart-line .bar{
+    height:  100%;
+}
+
+.horizontal-bar-graph  .number-line{
+    background: none;
+    position: relative;
+}
+
+.horizontal-bar-graph  .number-line .number{
+    text-align: start;
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+}
