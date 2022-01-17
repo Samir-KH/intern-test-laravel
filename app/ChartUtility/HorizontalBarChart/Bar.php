@@ -11,10 +11,7 @@ class Bar{
 
     function __construct($title, $lenght, $color){
         $this->lenght = $lenght;
-        if( 0 <= $lenght && $lenght <= 100 ){
-            $this->title = $title;
-        }
-        else throw new \Exception("The lenght must be a percentage");
+        $this->title = $title;
         if(preg_match($this->colorRegex, $color) ){
             $this->color = $color;
         }
@@ -24,7 +21,7 @@ class Bar{
     public function render(){
         return '<li class="chart-line ">
         <p class="bar-title">'.$this->title.'</p>
-        <div class="bar" style="width: '.$this->lenght.'%;background-color: '.$this->color.';"></div>
+        <div class="bar" style="width: '.$this->lenght.'px;background-color: '.$this->color.';"></div>
     </li>';
     }
 }
