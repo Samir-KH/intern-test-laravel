@@ -37,7 +37,6 @@ class ChartController extends Controller
             $barWidth = $count *  50 / $step;    
             $grossVolumeChart->createBar($poduct_Line, $barWidth, "#50C976");
         }
-        dump($list_poduct_Lines);
         return $grossVolumeChart->renderChart();
     }
 }
