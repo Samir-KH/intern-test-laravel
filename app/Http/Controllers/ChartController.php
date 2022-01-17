@@ -30,7 +30,7 @@ class ChartController extends Controller
         }
         $grossVolumeChart = new HorizontalBarChart(1, "Revenue brut par catégorie", 600, 25, 0);
         $grossVolumeChart->createBar("titre", 60, "#50C976");
-        foreach ()
+        foreach ()git
         
     }*/
 }
