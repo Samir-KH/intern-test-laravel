@@ -19,3 +19,6 @@ This command allow to load ths csv file into a mongo db atlas cluster
     Document number 345 is created successfully !
     Document number 346 is created successfully !
 ```
+
+# web app: 
+    Visit /charts to see different charts
