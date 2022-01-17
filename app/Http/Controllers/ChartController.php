@@ -8,10 +8,18 @@ use App\Models\Invoice;
 
 class ChartController extends Controller
 {
+    private $color = ["#f46544", "#50C976", "#44baef", "#b8c401", "#b03c36"];
+    private $index = 0;
     public function index(){
         return view("charts", ["grossVolumeChart" => $this->ProductLineCount()]);
     }
 
+    private function getColor(){
+        $colorNumber = count($this->color);
+        $color = $this->color[$this->index];
+        $this->index = ($this->index+1) % $colorNumber;
+        return $color;
+    }
     private function ProductLineCount(){
         $list_poduct_Lines = ["Health and beauty" => 0 , 
             "Electronic accessories" => 0, 
@@ -35,7 +43,7 @@ class ChartController extends Controller
         foreach($list_poduct_Lines as $poduct_Line => $count){
 
             $barWidth = $count *  50 / $step;    
-            $grossVolumeChart->createBar($poduct_Line, $barWidth, "#50C976");
+            $grossVolumeChart->createBar($poduct_Line, $barWidth, $this->getcolor() );
         }
         return $grossVolumeChart->renderChart();
     }
