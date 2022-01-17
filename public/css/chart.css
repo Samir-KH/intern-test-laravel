@@ -4,6 +4,7 @@
     border-radius: 5px;
     width: fit-content;
     font-family: 'Roboto', sans-serif;
+    margin: 5px auto;
 }
 
 .horizontal-bar-graph *{
